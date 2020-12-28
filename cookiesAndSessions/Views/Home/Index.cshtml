@@ -1,0 +1,37 @@
+﻿@{
+
+    ViewData["Title"] = "Preference Picker";
+
+}
+
+
+<h2>Preference Picker</h2>
+
+
+<p class="favColour @ViewData["myColour"]">@ViewData["myColour"]</p>
+
+<form method="post">
+
+    <div>
+
+        <select name="pickedColour" asp-for="@ViewData["myColour"]">
+
+            <option value="red">Red</option>
+
+            <option value="blue">Blue</option>
+
+            <option value="green">Green</option>
+
+        </select>
+
+
+
+    </div>
+
+    <div>
+
+        <input type="submit" value="Pick Colour" />
+
+    </div>
+
+</form>

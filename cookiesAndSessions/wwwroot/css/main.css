@@ -1,0 +1,43 @@
+﻿body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+header{
+    border-bottom:2px solid #ccc;
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+.favColour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    width: 150px;
+    height: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:2rem;
+}
+.red {
+    background-color: #F56B69;
+    color: #fff;
+}
+.blue {
+    background-color: #75C9F5;
+    color: #fff;
+}
+.green {
+    background-color: #8AF5A1;
+    color: #999;
+}
+form>div{
+    margin:10px;
+}
+select, input[type="submit"]{
+    width:150px;
+}
+select{
+    padding:10px;
+    font-size:1.2rem;
+}
