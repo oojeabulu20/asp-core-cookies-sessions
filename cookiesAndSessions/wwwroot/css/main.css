@@ -41,3 +41,11 @@ select{
     padding:10px;
     font-size:1.2rem;
 }
+.sessionDisplay {
+    border: 2px solid #ccc;
+    border-radius:4px;
+    box-shadow:2px 2px 2px #000;
+    display:inline-block;
+    margin:20px;
+    padding:20px;
+}

@@ -66,6 +66,48 @@ namespace cookiesAndSessions.Controllers
             return Redirect("/Home/Index");
         }
 
+        public IActionResult SessionDemo()
+        {
+            if (HttpContext.Session.GetString("Name") == null)
+            {
+                ViewData["myName"] = "Not Set";
+            }
+            else
+            {
+                ViewData["myName"] = HttpContext.Session.GetString("Name"); ;
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SessionDemo(IFormCollection form)
+        {
+            string newName = form["myName"].ToString();
+            HttpContext.Session.SetString("Name", newName);
+            ViewData["myName"] = newName;
+            return View();
+        }
+
+        public IActionResult TestSession()
+        {
+            if (HttpContext.Session.GetString("Name") == null)
+            {
+                ViewData["myName"] = "Not Set";
+            }
+            else
+            {
+                ViewData["myName"] = HttpContext.Session.GetString("Name"); ;
+            }
+            return View();
+        }
+
+        public IActionResult DeleteSession()
+        {
+            HttpContext.Session.Clear();
+            return Redirect("/Home/SessionDemo");
+        }
+
+
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
