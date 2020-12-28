@@ -4,6 +4,24 @@
 header{
     border-bottom:2px solid #ccc;
 }
+nav ul{
+    display:flex;
+    list-style:none;
+    padding-left:0;
+}
+nav ul li a {
+        display: block;
+        padding: 5px 10px 1px 10px;
+        margin-right:20px;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 4px solid #fff;
+        transition:0.1s all linear;
+}
+    nav ul li a:hover {
+        border-bottom: 4px solid #8AF5A1;
+        transition: 0.5s all linear;
+    }
 .container{
     max-width:1200px;
     margin:auto;
@@ -31,21 +49,42 @@ header{
     background-color: #8AF5A1;
     color: #999;
 }
+.yellow {
+    background-color: #ffff00;
+    color: #090909;
+}
+.purple {
+    background-color: #8644EB;
+    color: #fff;
+}
 form>div{
     margin:10px;
 }
 select, input[type="submit"]{
     width:150px;
 }
-select{
+select, input[type="text"]{
     padding:10px;
     font-size:1.2rem;
 }
 .sessionDisplay {
     border: 2px solid #ccc;
-    border-radius:4px;
-    box-shadow:2px 2px 2px #000;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #000;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: #8AF5A1;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.delete {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration:none;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background-color: #F56B69;
     display:inline-block;
-    margin:20px;
-    padding:20px;
+    padding:3px 8px;
 }
