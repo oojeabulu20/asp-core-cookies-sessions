@@ -19,7 +19,7 @@ nav ul li a {
         transition:0.1s all linear;
 }
     nav ul li a:hover {
-        border-bottom: 4px solid #8AF5A1;
+        border-bottom: 4px solid #65A773;
         transition: 0.5s all linear;
     }
 .container{
