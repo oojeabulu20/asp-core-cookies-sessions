@@ -56,6 +56,7 @@ namespace cookiesAndSessions.Controllers
             }
             return View();
         }
+  
 
         public IActionResult DeleteCookies()
         {
@@ -106,7 +107,29 @@ namespace cookiesAndSessions.Controllers
             HttpContext.Session.Clear();
             return Redirect("/Home/SessionDemo");
         }
-
+        [HttpGet]
+        public IActionResult PreferencePick()
+        {
+            if (Request.Cookies["Colour"] == null)
+            {
+                ViewData["myColour"] = "red";
+            }
+            else
+            {
+                ViewData["myColour"] = Request.Cookies["Colour"].ToString();
+            }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult PreferencePick(IFormCollection form)
+        {
+            string newColour = form["pickedColour"].ToString();
+            CookieOptions option = new CookieOptions();
+            option.Expires = DateTime.Now.AddMinutes(10);
+            Response.Cookies.Append("Colour", newColour, option);
+            ViewData["myColour"] = newColour;
+            return View();
+        }
 
 
 
